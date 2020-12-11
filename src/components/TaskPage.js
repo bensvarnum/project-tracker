@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 
+const TASKS_STATUSES = ["unstarted", "In Progress", "Completed"];
+
 const TaskPage = () => {
   const [cardForm, showcardForm] = useState(false);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const onChangeTitle = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const onChangeDescription = (e) => {
+    setDescription(e.target.value);
+  };
 
   const formToggler = () => {
     showcardForm(!cardForm);
   };
+
+  const renderTaskLists = () => {};
 
   return (
     <div>
@@ -29,6 +43,7 @@ const TaskPage = () => {
                   type="text"
                   className="form-control"
                   placeholder="Task Title"
+                  onChange={onChangeTitle}
                 />
               </div>
               <div className="form-group">
@@ -36,6 +51,7 @@ const TaskPage = () => {
                   type="text"
                   className="form-control"
                   placeholder="Task Description"
+                  onChange={onChangeDescription}
                 ></textarea>
               </div>
               <button type="submit" className="btn btn-primary">
