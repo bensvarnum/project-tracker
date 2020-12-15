@@ -6,6 +6,7 @@ const TasksPage = (props) => {
   const [cardForm, showcardForm] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  // const [light, setDarkMode] = useState("");
 
   const onChangeTitle = (e) => {
     setTitle(e.target.value);
@@ -32,9 +33,12 @@ const TasksPage = (props) => {
   };
 
   const renderTaskLists = () => {
-    const { tasks } = props;
+    // const { tasks } = props;
+
     return TASKS_STATUSES.map((status, id) => {
-      const statusTasks = tasks.filter((task) => task.status === status);
+      const statusTasks = props.tasks.tasks.filter(
+        (task) => task.status === status
+      );
       return (
         <div className="col-md-3 card m-2 p-0" key={id}>
           <TasksList

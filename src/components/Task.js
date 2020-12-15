@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
+
 const TASKS_STATUSES = ["Unstarted", "In Progress", "Completed"];
 
 const Task = (props) => {
@@ -30,6 +31,11 @@ const Task = (props) => {
       <p className="card-text mb-3 text-muted font-weight-bold px-2">
         {props.task.description}
       </p>
+      <FontAwesomeIcon
+        icon={faCheck}
+        className="float-right m-2"
+        style={{ color: "blue", cursor: "pointer" }}
+      />
       <FontAwesomeIcon
         icon={faTrash}
         className="float-right m-2"
