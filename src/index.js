@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // import { createStore, applyMiddleware, compose } from "redux";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/actions/store";
 // import tasks from "./redux/reducers";
@@ -14,7 +15,9 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

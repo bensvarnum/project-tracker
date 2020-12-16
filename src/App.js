@@ -1,39 +1,29 @@
 import React from "react";
-import "./App.css";
-import { connect } from "react-redux";
-import "bootstrap/dist/css/bootstrap.min.css";
-import TasksPage from "./components/TasksPage";
-import { editTask, createTask, removeTask } from "./redux/actions";
+import { Link, Route, Switch } from "react-router-dom";
+import Main from "./components/Main";
 
-function App(props) {
-  const onStatusChange = (id, status) => {
-    props.dispatch(editTask(id, { status }));
-  };
-
-  const onCreateTask = ({ title, description }) => {
-    props.dispatch(createTask({ title, description }));
-  };
-
-  const onRemoveTask = (id) => {
-    props.dispatch(removeTask(id));
-  };
-
+function App() {
   return (
-    <div className="app">
-      <TasksPage
-        tasks={props.tasks}
-        onStatusChange={onStatusChange}
-        onCreateTask={onCreateTask}
-        onRemoveTask={onRemoveTask}
-      />
+    <div className="y-app">
+      <header>
+        <Link to="/">Home</Link>
+        {/* <div className="navs">
+          <Link to="/checking">Checking</Link>
+          <Link to="/savings">Savings</Link>
+        </div> */}
+      </header>
+
+      <main>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          {/* <Route exact path="/checking" component={Checking} />
+          <Route exact path="/savings" component={Savings} /> */}
+        </Switch>
+      </main>
+
+      <footer>This the footer</footer>
     </div>
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    tasks: state.tasks,
-  };
-};
-
-export default connect(mapStateToProps)(App);
+export default App;

@@ -59,7 +59,7 @@ const TasksPage = (props) => {
         <div className="row">
           <div className="col-md-2">
             <button className="btn btn-success m-3" onClick={formToggler}>
-              +
+              + Add Task
             </button>
           </div>
           <div className="col-md-10">
