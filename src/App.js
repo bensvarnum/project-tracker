@@ -1,12 +1,14 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
     <div className="y-app">
       <header>
-        <Link to="/">Home</Link>
+        <Link to="/">Dashboard</Link>
         {/* <div className="navs">
           <Link to="/checking">Checking</Link>
           <Link to="/savings">Savings</Link>
@@ -21,7 +23,7 @@ function App() {
         </Switch>
       </main>
 
-      <footer>This the footer</footer>
+      <Footer />
     </div>
   );
 }
