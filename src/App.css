@@ -7,3 +7,13 @@
 body {
   background: rgb(236, 236, 236);
 }
+
+.footer__content {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}

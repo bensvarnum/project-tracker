@@ -18,7 +18,10 @@ export default function (state = initialState, action) {
     }
 
     case LOGOUT_USER: {
-      return (state.user = null);
+      return {
+        ...state,
+        user: (state.user = null),
+      };
     }
 
     default:

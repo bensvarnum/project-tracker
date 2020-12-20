@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TasksList from "./TasksList";
+
 const TASKS_STATUSES = ["Unstarted", "In Progress", "Completed"];
 
 const TasksPage = (props) => {
@@ -59,15 +60,17 @@ const TasksPage = (props) => {
       <div className="jumbotron py-3">
         <div className="row">
           <div className="col-md-2">
-            <h1>Welcome...{props.user.user.name}!</h1>
             <button className="btn btn-success m-3" onClick={formToggler}>
               + Add Task
             </button>
           </div>
-          <div className="col-md-10">
-            <h2 className="display-4 text-center text-uppercase">
+          <div className="col-md-8">
+            <h3 className="display-5 text-center text-uppercase">
               Project Tracker
-            </h2>
+            </h3>
+            <h3 className="display-5 text-center text-uppercase">
+              Welcome...{props.user.user.name}!
+            </h3>
           </div>
         </div>
         {/* input form */}

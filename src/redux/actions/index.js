@@ -48,3 +48,10 @@ export const loginUser = ({ name, email, password }) => {
     },
   };
 };
+
+export const logoutUser = (id) => {
+  return {
+    type: LOGOUT_USER,
+    id,
+  };
+};

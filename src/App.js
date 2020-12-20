@@ -7,14 +7,6 @@ import "./App.css";
 function App() {
   return (
     <div className="y-app">
-      <header>
-        <Link to="/">Dashboard</Link>
-        {/* <div className="navs">
-          <Link to="/checking">Checking</Link>
-          <Link to="/savings">Savings</Link>
-        </div> */}
-      </header>
-
       <main>
         <Switch>
           <Route exact path="/" component={Main} />

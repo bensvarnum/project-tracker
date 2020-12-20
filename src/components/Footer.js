@@ -42,7 +42,7 @@ export default class Footer extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div>
+        <div className="footer__content">
           <p>"{items[0].text}"</p>
           <h5>-{items[0].author}</h5>
         </div>

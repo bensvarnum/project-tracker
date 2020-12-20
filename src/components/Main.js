@@ -3,8 +3,15 @@ import "../App.css";
 import { connect, useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TasksPage from "./TasksPage";
-import { editTask, createTask, removeTask, loginUser } from "../redux/actions";
+import {
+  editTask,
+  createTask,
+  removeTask,
+  loginUser,
+  logoutUser,
+} from "../redux/actions";
 import Login from "./Login";
+import Nav from "./Nav";
 import { selectUser } from "../redux/reducers/user";
 
 function Main(props) {
@@ -25,11 +32,21 @@ function Main(props) {
   const onCreateUser = ({ name, email, password }) => {
     props.dispatch(loginUser({ name, email, password }));
   };
-  console.log("a", props.user);
-  console.log("b", props.user.user);
-  console.log("c", user);
+
+  const onLogoutUser = (id) => {
+    props.dispatch(logoutUser(id));
+  };
+
+  // console.log("a", props.user);
+  // console.log("b", props.user.user);
+  // console.log("c", user);
+
   return (
     <div className="app">
+      <div>
+        <Nav user={props.user} onLogoutUser={onLogoutUser} />
+      </div>
+      <br />
       {user ? (
         <TasksPage
           tasks={props.tasks}
