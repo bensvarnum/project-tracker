@@ -1,5 +1,5 @@
 import React from "react";
-
+import shuffle from "lodash/shuffle";
 // import "./App.css";
 
 export default class Footer extends React.Component {
@@ -33,9 +33,9 @@ export default class Footer extends React.Component {
 
   render() {
     const { error, isLoading, items } = this.state;
-    // console.log("item", items[0]);
-    const randomItem = Math.floor(Math.random() * items.length);
-    console.log("random", items[randomItem]);
+
+    const randomItem = shuffle(items);
+
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoading) {
@@ -43,8 +43,8 @@ export default class Footer extends React.Component {
     } else {
       return (
         <div className="footer__content">
-          <p>"{items[0].text}"</p>
-          <h5>-{items[0].author}</h5>
+          <p>"{randomItem[0].text}"</p>
+          <h5>-{randomItem[0].author}</h5>
         </div>
       );
     }

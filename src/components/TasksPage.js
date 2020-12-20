@@ -7,7 +7,6 @@ const TasksPage = (props) => {
   const [cardForm, showcardForm] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  // const [light, setDarkMode] = useState("");
 
   const onChangeTitle = (e) => {
     setTitle(e.target.value);
@@ -34,8 +33,6 @@ const TasksPage = (props) => {
   };
 
   const renderTaskLists = () => {
-    // const { tasks } = props;
-
     return TASKS_STATUSES.map((status, id) => {
       const statusTasks = props.tasks.tasks.filter(
         (task) => task.status === status
@@ -53,7 +50,6 @@ const TasksPage = (props) => {
       );
     });
   };
-  console.log("props", props.user.user.name);
 
   return (
     <div className="container my-5">

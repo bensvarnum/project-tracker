@@ -37,10 +37,6 @@ function Main(props) {
     props.dispatch(logoutUser(id));
   };
 
-  // console.log("a", props.user);
-  // console.log("b", props.user.user);
-  // console.log("c", user);
-
   return (
     <div className="app">
       <div>
