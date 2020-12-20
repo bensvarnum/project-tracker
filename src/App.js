@@ -6,13 +6,12 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="y-app">
+    <div className="container">
       <main>
         <Switch>
           <Route exact path="/" component={Main} />
         </Switch>
       </main>
-
       <Footer />
     </div>
   );
