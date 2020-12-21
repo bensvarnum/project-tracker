@@ -9,6 +9,7 @@ import {
   removeTask,
   loginUser,
   logoutUser,
+  createProject,
 } from "../redux/actions";
 import Login from "./Login";
 import Nav from "./Nav";
@@ -37,6 +38,10 @@ function Main(props) {
     props.dispatch(logoutUser(id));
   };
 
+  const onCreateProject = ({ title }) => {
+    props.dispatch(createProject({ title }));
+  };
+
   return (
     <div className="main__view">
       <div>
@@ -50,9 +55,10 @@ function Main(props) {
           onCreateTask={onCreateTask}
           onRemoveTask={onRemoveTask}
           user={props.user}
+          projects={props.projects}
         />
       ) : (
-        <Login onCreateUser={onCreateUser} />
+        <Login onCreateUser={onCreateUser} onCreateProject={onCreateProject} />
       )}
     </div>
   );
@@ -62,6 +68,7 @@ const mapStateToProps = (state) => {
   return {
     tasks: state.tasks,
     user: state.user,
+    projects: state.project,
   };
 };
 

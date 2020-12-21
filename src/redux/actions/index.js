@@ -4,6 +4,7 @@ import {
   REMOVE_TASK,
   LOGIN_USER,
   LOGOUT_USER,
+  CREATE_PROJECT,
 } from "./types";
 
 import uuid from "react-uuid";
@@ -53,5 +54,15 @@ export const logoutUser = (id) => {
   return {
     type: LOGOUT_USER,
     id,
+  };
+};
+
+export const createProject = ({ title }) => {
+  return {
+    type: CREATE_PROJECT,
+    payload: {
+      id: uuid(),
+      title,
+    },
   };
 };

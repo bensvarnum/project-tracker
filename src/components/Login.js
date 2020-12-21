@@ -5,16 +5,19 @@ const Login = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [title, setTitle] = useState("");
 
   const resetForm = () => {
     setName("");
     setEmail("");
     setPassword("");
+    setTitle("");
   };
 
   const onCreateUser = (e) => {
     e.preventDefault();
     props.onCreateUser({ name, email, password });
+    props.onCreateProject({ title });
     resetForm();
   };
 
@@ -22,10 +25,10 @@ const Login = (props) => {
     <div className="login">
       <form
         className="login__form needs-validation"
-        novalidate
+        formNoValidate
         onSubmit={onCreateUser}
       >
-        <h1>Sign Up here</h1>
+        <h1>Let's Get Started</h1>
         <input
           type="name"
           placeholder="Name"
@@ -34,7 +37,7 @@ const Login = (props) => {
           className="form-control"
           required
         />
-        <div class="invalid-feedback">Please enter your name.</div>
+        <div className="invalid-feedback">Please enter your name.</div>
         <input
           type="email"
           placeholder="Email"
@@ -43,7 +46,7 @@ const Login = (props) => {
           className="form-control"
           required
         />
-        <div class="invalid-feedback">Please enter your email.</div>
+        <div className="invalid-feedback">Please enter your email.</div>
         <input
           type="password"
           placeholder="Password"
@@ -52,12 +55,18 @@ const Login = (props) => {
           className="form-control"
           required
         />
-        <div class="invalid-feedback">Please enter a password.</div>
+        <div className="invalid-feedback">Please enter a password.</div>
+        <input
+          type="text"
+          placeholder="Project"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="form-control"
+          required
+        />
+        <div className="invalid-feedback">Please enter a project name.</div>
         <button type="submit" className="submit__btn">
-          Submit
-        </button>
-        <button type="submit" className="submit__btn ">
-          Register
+          Check-in
         </button>
       </form>
     </div>

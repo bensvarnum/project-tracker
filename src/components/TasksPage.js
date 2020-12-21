@@ -62,10 +62,10 @@ const TasksPage = (props) => {
           </div>
           <div className="col-md-8">
             <h3 className="display-5 text-center text-uppercase">
-              Project Tracker
+              Welcome...{props.user.user.name}!
             </h3>
             <h3 className="display-5 text-center text-uppercase">
-              Welcome...{props.user.user.name}!
+              Let's get started on project... {props.projects.projects[0].title}
             </h3>
           </div>
         </div>

@@ -16,6 +16,7 @@ function Nav(props) {
             alt="logo"
             style={{ width: "75px", height: "75px" }}
           />
+          <h3 style={{ color: "white" }}>On Track</h3>
 
           <button className="btn btn-success m-3" onClick={onLogoutUser}>
             Logout
