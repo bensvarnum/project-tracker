@@ -1,17 +1,19 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+// import { Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+
 import "./App.css";
 
 function App() {
   return (
     <div className="container">
-      <main>
+      {/* <main>
         <Switch>
           <Route exact path="/" component={Main} />
         </Switch>
-      </main>
+      </main> */}
+      <Main />
       <Footer />
     </div>
   );

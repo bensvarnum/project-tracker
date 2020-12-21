@@ -7,13 +7,22 @@
 body {
   background: rgb(236, 236, 236);
 }
-
 .footer__content {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: blue;
+  align-items: center;
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0;
+
   color: white;
-  text-align: center;
+}
+
+.main__view {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  margin: 50px;
 }

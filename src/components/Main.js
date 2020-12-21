@@ -38,7 +38,7 @@ function Main(props) {
   };
 
   return (
-    <div className="app">
+    <div className="main__view">
       <div>
         <Nav user={props.user} onLogoutUser={onLogoutUser} />
       </div>
