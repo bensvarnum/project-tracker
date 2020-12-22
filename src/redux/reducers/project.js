@@ -6,7 +6,6 @@ const initialState = {
 
 // eslint-disable-next-line
 export default function (state = initialState, action) {
-  //   const { payload } = action;
   switch (action.type) {
     case CREATE_PROJECT: {
       return {

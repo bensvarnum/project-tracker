@@ -42,11 +42,10 @@ export default class Footer extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div className="footer__content">
-          {/* style={{ background: "#4c96d7" }} */}
+        <nav className="footer__content navbar fixed-bottom">
           <p>"{randomItem[0].text}"</p>
           <h5>-{randomItem[0].author}</h5>
-        </div>
+        </nav>
       );
     }
   }

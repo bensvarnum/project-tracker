@@ -1,16 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import { createStore, applyMiddleware, compose } from "redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/actions/store";
-// import tasks from "./redux/reducers";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-// const store = createStore(tasks, composeEnhancers(applyMiddleware()));
 
 ReactDOM.render(
   <React.StrictMode>

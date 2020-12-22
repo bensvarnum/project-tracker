@@ -13,7 +13,7 @@ import {
 } from "../redux/actions";
 import Login from "./Login";
 import Nav from "./Nav";
-// import Footer from "./Footer";
+
 import { selectUser } from "../redux/reducers/user";
 
 function Main(props) {
