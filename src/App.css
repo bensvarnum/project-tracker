@@ -9,7 +9,7 @@ body {
 }
 .footer__content {
   align-items: center;
-  background: blue;
+  background: rgb(16, 97, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;

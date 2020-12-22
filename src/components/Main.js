@@ -13,6 +13,7 @@ import {
 } from "../redux/actions";
 import Login from "./Login";
 import Nav from "./Nav";
+// import Footer from "./Footer";
 import { selectUser } from "../redux/reducers/user";
 
 function Main(props) {
@@ -43,24 +44,27 @@ function Main(props) {
   };
 
   return (
-    <div className="main__view">
-      <div>
-        <Nav user={props.user} onLogoutUser={onLogoutUser} />
+    <>
+      <Nav user={props.user} onLogoutUser={onLogoutUser} />
+
+      <div className="main__view">
+        {user ? (
+          <TasksPage
+            tasks={props.tasks}
+            onStatusChange={onStatusChange}
+            onCreateTask={onCreateTask}
+            onRemoveTask={onRemoveTask}
+            user={props.user}
+            projects={props.projects}
+          />
+        ) : (
+          <Login
+            onCreateUser={onCreateUser}
+            onCreateProject={onCreateProject}
+          />
+        )}
       </div>
-      <br />
-      {user ? (
-        <TasksPage
-          tasks={props.tasks}
-          onStatusChange={onStatusChange}
-          onCreateTask={onCreateTask}
-          onRemoveTask={onRemoveTask}
-          user={props.user}
-          projects={props.projects}
-        />
-      ) : (
-        <Login onCreateUser={onCreateUser} onCreateProject={onCreateProject} />
-      )}
-    </div>
+    </>
   );
 }
 

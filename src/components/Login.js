@@ -23,6 +23,20 @@ const Login = (props) => {
 
   return (
     <div className="login">
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+          <h1 className="display-4">On Track</h1>
+          <p className="lead">On Track is a simple to use project tracker.</p>
+          <p>
+            Although it is simple to use, the focus is kept on the progress of
+            the project.
+          </p>
+          <p>
+            Use this tool to break down bigger tasks into smaller, much easier
+            to handle tasks.
+          </p>
+        </div>
+      </div>
       <form
         className="login__form needs-validation"
         formNoValidate
@@ -38,7 +52,7 @@ const Login = (props) => {
           required
         />
         <div className="invalid-feedback">Please enter your name.</div>
-        <input
+        {/* <input
           type="email"
           placeholder="Email"
           value={email}
@@ -55,7 +69,7 @@ const Login = (props) => {
           className="form-control"
           required
         />
-        <div className="invalid-feedback">Please enter a password.</div>
+        <div className="invalid-feedback">Please enter a password.</div> */}
         <input
           type="text"
           placeholder="Project"

@@ -4,30 +4,30 @@ import { REMOVE_TASK } from "../actions/types";
 
 const initialState = {
   tasks: [
-    {
-      id: 1,
-      title: "create-react-app",
-      description: "npx create-react-app",
-      status: "Completed",
-    },
-    {
-      id: 2,
-      title: "import redux",
-      description: "npm redux react-redux",
-      status: "In Progress",
-    },
-    {
-      id: 3,
-      title: "create redux store",
-      description: "wrap app component in provider",
-      status: "In Progress",
-    },
-    {
-      id: 4,
-      title: "create a back-end",
-      description: "setup a database",
-      status: "Unstarted",
-    },
+    // {
+    //   id: 1,
+    //   title: "create-react-app",
+    //   description: "npx create-react-app",
+    //   status: "Completed",
+    // },
+    // {
+    //   id: 2,
+    //   title: "import redux",
+    //   description: "npm redux react-redux",
+    //   status: "In Progress",
+    // },
+    // {
+    //   id: 3,
+    //   title: "create redux store",
+    //   description: "wrap app component in provider",
+    //   status: "In Progress",
+    // },
+    // {
+    //   id: 4,
+    //   title: "create a back-end",
+    //   description: "setup a database",
+    //   status: "Unstarted",
+    // },
   ],
 };
 
