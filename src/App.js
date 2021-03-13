@@ -1,7 +1,7 @@
 import React from "react";
 // import { Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
-import Footer from "./components/Footer";
+
 
 import "./App.css";
 
@@ -14,7 +14,7 @@ function App() {
         </Switch>
       </main> */}
       <Main />
-      <Footer />
+      
     </div>
   );
 }
